@@ -21,7 +21,7 @@ void StateInfo::AddClient(const Time& time, const std::string& name) {
         PrintError(time, "NotOpenYet");
         return;
     }
-    clients_[name] = Client(name);
+    clients_[name] = Client();
     return;
 }
 
