@@ -73,6 +73,7 @@ void StateInfo::ClientLeft(const Time& time, const std::string& name) {
     clients_.erase(client);
     if (old_station != -1) {
         stations_[old_station - 1].Free(time);
+        --occupied_station_count_;
         OccupyStationOutcoming(time, old_station);
     }
     return;
@@ -89,6 +90,7 @@ void StateInfo::OccupyStationOutcoming(const Time& time, int station_number) {
     client->second.station_occupied = station_number;
 
     stations_[station_number - 1].Occupy(time);
+    ++occupied_station_count_;
     PrintEvent(time, 12, name, station_number);
 }
 
