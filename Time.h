@@ -12,6 +12,7 @@ public:
     friend std::ostream& operator<< (std::ostream& out, const Time& time);
 private:
     Time(int32_t minutes);
+    void CheckCorrectness(const std::string line);
 
     std::string format_;
     int32_t minutes_;
