@@ -52,5 +52,7 @@ void EventProcessor::ProcessEvent(const std::string& line) {
         info_.WaitForStation(time, name);
     } else if (id == 4) { // client left 
         info_.ClientLeft(time, name);
+    } else {
+        throw std::invalid_argument("");
     }
 }
