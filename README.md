@@ -1,11 +1,12 @@
-# Компиляция на Linux (проверено на g++)
+# Компиляция на Linux 
+(проверено на g++)
 
 ```
 mkdir build
 cd build
 cmake ..
 make
-./main ../test_gile.txt
+./main ../test_file.txt
 ```
 # Компиляция на Windows
 
