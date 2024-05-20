@@ -9,7 +9,7 @@ make
 ./main ../examples/test_file.txt
 ```
 # Компиляция на Windows
-
+(компилятор MSVC)
 ```
 mkdir build
 cd build
