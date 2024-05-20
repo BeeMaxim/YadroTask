@@ -105,6 +105,7 @@ void StateInfo::ClientsOut() {
         ClientLeftOutcoming(close_time_, client.first);
         int station_number = client.second.station_occupied;
         if (station_number != -1) {
+            --occupied_station_count_;
             stations_[station_number - 1].Free(close_time_);
         }
     }
