@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <unordered_map>
+#include <map>
 #include <vector>
 #include <queue>
 
@@ -28,7 +28,7 @@ public:
     void PrintStationInfo(int price) const;
 
 private:
-    std::unordered_map<std::string, Client> clients_;
+    std::map<std::string, Client> clients_;
     std::queue<std::string> client_queue_;
     std::vector<Station> stations_;
     Time open_time_;
